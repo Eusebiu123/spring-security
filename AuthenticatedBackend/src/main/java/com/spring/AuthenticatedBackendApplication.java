@@ -1,4 +1,4 @@
-package com.unkownkoder;
+package com.spring;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.unkownkoder.models.ApplicationUser;
-import com.unkownkoder.models.Role;
-import com.unkownkoder.repository.RoleRepository;
-import com.unkownkoder.repository.UserRepository;
+import com.spring.models.ApplicationUser;
+import com.spring.models.Role;
+import com.spring.repository.RoleRepository;
+import com.spring.repository.UserRepository;
 
 @SpringBootApplication
 public class AuthenticatedBackendApplication {

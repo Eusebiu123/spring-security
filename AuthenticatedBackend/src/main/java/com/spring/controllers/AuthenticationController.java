@@ -1,4 +1,4 @@
-package com.unkownkoder.controllers;
+package com.spring.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.unkownkoder.models.ApplicationUser;
-import com.unkownkoder.models.LoginResponseDTO;
-import com.unkownkoder.models.RegistrationDTO;
-import com.unkownkoder.services.AuthenticationService;
+import com.spring.models.ApplicationUser;
+import com.spring.models.LoginResponseDTO;
+import com.spring.models.RegistrationDTO;
+import com.spring.services.AuthenticationService;
 
 @RestController
 @RequestMapping("/auth")
