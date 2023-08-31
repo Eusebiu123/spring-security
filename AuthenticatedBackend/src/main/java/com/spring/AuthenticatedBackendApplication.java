@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.spring.models.ApplicationUser;
-import com.spring.models.Role;
-import com.spring.repository.RoleRepository;
-import com.spring.repository.UserRepository;
+import com.spring.security.models.ApplicationUser;
+import com.spring.security.models.Role;
+import com.spring.security.repository.RoleRepository;
+import com.spring.security.repository.UserRepository;
 
 @SpringBootApplication
 public class AuthenticatedBackendApplication {

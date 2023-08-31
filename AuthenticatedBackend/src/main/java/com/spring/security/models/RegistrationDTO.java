@@ -1,4 +1,4 @@
-package com.spring.models;
+package com.spring.security.models;
 
 public class RegistrationDTO {
     private String username;

@@ -1,4 +1,4 @@
-package com.spring.controllers;
+package com.spring.security.controllers;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

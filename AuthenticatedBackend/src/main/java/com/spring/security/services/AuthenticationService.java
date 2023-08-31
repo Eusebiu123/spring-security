@@ -1,8 +1,12 @@
-package com.spring.services;
+package com.spring.security.services;
 
 import java.util.HashSet;
 import java.util.Set;
 
+import com.spring.security.models.ApplicationUser;
+import com.spring.security.models.LoginResponseDTO;
+import com.spring.security.repository.RoleRepository;
+import com.spring.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -12,11 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.spring.models.ApplicationUser;
-import com.spring.models.LoginResponseDTO;
-import com.spring.models.Role;
-import com.spring.repository.RoleRepository;
-import com.spring.repository.UserRepository;
+import com.spring.security.models.Role;
 
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.spring.models;
+package com.spring.security.models;
 
 import org.springframework.security.core.GrantedAuthority;
 

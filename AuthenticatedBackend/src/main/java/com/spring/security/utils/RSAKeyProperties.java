@@ -1,4 +1,4 @@
-package com.spring.utils;
+package com.spring.security.utils;
 
 import java.security.KeyPair;
 import java.security.interfaces.RSAPrivateKey;
