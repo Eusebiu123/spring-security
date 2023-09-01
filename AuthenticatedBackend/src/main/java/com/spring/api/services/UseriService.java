@@ -3,16 +3,16 @@ package com.spring.api.services;
 
 import com.spring.api.exception.UserNotFoundException;
 import com.spring.api.models.User;
-import com.spring.api.repository.UserRepository;
+import com.spring.api.repository.UseriRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UserService {
+public class UseriService {
     @Autowired
-    private UserRepository userRepository;
+    private UseriRepository userRepository;
     public User registerUser (User newUser){
         return userRepository.save(newUser);
     }

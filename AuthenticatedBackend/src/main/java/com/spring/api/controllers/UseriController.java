@@ -1,18 +1,19 @@
 package com.spring.api.controllers;
 
 import com.spring.api.models.User;
-import com.spring.api.services.UserService;
+import com.spring.api.services.UseriService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+@RequestMapping("/api/v1")
 
 @RestController
 @CrossOrigin("http://localhost:3000")
-public class UserController {
+public class UseriController {
 
     @Autowired
-    private UserService userService;
+    private UseriService userService;
     @PostMapping("/newUser")
     User newUser(@RequestBody User newUser)
     {
