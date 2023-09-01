@@ -52,24 +52,24 @@ public class AuthenticationService {
         return userRepository.save(new ApplicationUser(0, username, encodedPassword, authorities));
     }
 
-    public LoginResponseDTO loginUser(String username, String password){
-
-        try{
-            Authentication auth = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(username, password)
-            );
-
-            String token = tokenService.generateJwt(auth);
-
-//            return new ResponseEntity<String>(HttpStatus.OK);
-
-            return new LoginResponseDTO(userRepository.findByUsername(username).get(), token);
-
-        } catch(AuthenticationException e){
-            return new LoginResponseDTO(null,"");
-//            return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
-        }
-    }
+//    public LoginResponseDTO loginUser(String username, String password){
+//
+//        try{
+//            Authentication auth = authenticationManager.authenticate(
+//                new UsernamePasswordAuthenticationToken(username, password)
+//            );
+//
+//            String token = tokenService.generateJwt(auth);
+//
+////            return new ResponseEntity<String>(HttpStatus.OK);
+//
+//            return new LoginResponseDTO(userRepository.findByUsername(username).get(), token);
+//
+//        } catch(AuthenticationException e){
+//            return new LoginResponseDTO(null,"");
+////            return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+//        }
+//    }
 //    public Response loginUser(String username, String password){
 //
 //        try{
@@ -87,5 +87,23 @@ public class AuthenticationService {
 //            return Response.status(401).entity("Username or Password are incorrect!").build();
 //        }
 //    }
+public ResponseEntity<String> loginUser(String username, String password){
+
+    try{
+        Authentication auth = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(username, password)
+        );
+
+        String token = tokenService.generateJwt(auth);
+
+            return new ResponseEntity<String>(HttpStatus.OK);
+
+//        return new LoginResponseDTO(userRepository.findByUsername(username).get(), token);
+
+    } catch(AuthenticationException e){
+
+            return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+    }
+}
 
 }

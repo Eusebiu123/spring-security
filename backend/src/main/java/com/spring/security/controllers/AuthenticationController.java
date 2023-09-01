@@ -1,9 +1,9 @@
 package com.spring.security.controllers;
 
 import com.spring.security.models.ApplicationUser;
-import com.spring.security.models.LoginResponseDTO;
 import com.spring.security.models.RegistrationDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,7 +28,7 @@ public class AuthenticationController {
     }
     
     @PostMapping("/login")
-    public LoginResponseDTO loginUser(@RequestBody RegistrationDTO body){
+    public ResponseEntity<String> loginUser(@RequestBody RegistrationDTO body){
         return authenticationService.loginUser(body.getUsername(), body.getPassword());
     }
 }   
